@@ -1,0 +1,14 @@
+aside {
+	float: left;
+	width: 20%;
+	}
+.wrapper
+	{
+		float: right;
+		width: calc(100% - 20%);
+	}
+.wrapper .form-pesanan
+{
+	margin: auto;
+	width: 50%;
+}

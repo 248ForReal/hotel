@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body{
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+}
+
+.sidebar{
+	position: fixed;
+	width: 280px;
+	height: 100%;
+	top: 1%;
+	left: 1%;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+	border-radius: 18px;
+	transition: .4s;
+	z-index: 9999;
+}
+
+.sidebar.active{
+	width: 80px;
+}
+
+.sidebar .i-burger{
+	position: absolute;
+	font-size: 2em;
+	background-color: #C850C0;
+	color: #fff;
+	right: -20px;
+	border-radius: 50%;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.sidebar .i-burger.i-bgr-2{
+	display: none;
+}
+
+.sidebar .logo_content{
+	padding: 2%;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	color: #676a8c;
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-top: 20px;
+	white-space: nowrap;
+}
+
+.sidebar .logo_content i{
+	font-size: 1.6em;
+	color: #df32dd;
+}
+
+.sidebar.active .logo_content .img_logo{
+	height: 20px;
+	transition: .3s;
+}
+
+.sidebar .garis{
+	height: 1px;
+	width: 76%;
+	margin: auto;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+.sidebar ul{
+	margin-top: 30px;	
+	padding: 6px 20px;
+}
+
+.sidebar ul li{
+	position: relative;
+	height: 50px;
+	width: 100%;
+	list-style: none;
+	margin-bottom: 8px;
+}
+
+.sidebar ul li a{
+	color: #676a8c;
+	display: flex;
+	text-decoration: none;
+	align-items: center;
+	border-radius: 10px;
+	font-size: .93em;
+	white-space: nowrap;
+	transition: .1s;
+}
+
+.sidebar ul li a:hover{
+	background-color: #f2f2f2;
+	color: #C850C0;
+}
+
+.sidebar ul li a:hover > i{
+	background-color: #4158D0;
+	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+	color: #fff;
+}
+
+.sidebar.active ul li a span{
+	display: none;
+}
+
+.sidebar .linkNav[aria-current="page"]{
+	color: #C850C0;
+	font-weight: 600;
+}
+
+.sidebar .linkNav[aria-current="page"] > i{
+	background-color: #4158D0;
+	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+	color: #fff;
+}
+
+.sidebar ul li a i{
+	height: 40px;
+	min-width: 40px;
+	border-radius: 12px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 22px;
+	background-color: #fff;
+	box-shadow: 0 2px 2px 2px rgba(0, 0, 0, .1);
+	margin-right: 20px;
+	color: #676a8c;
+	z-index: 99;
+}
+
+.sidebar ul li .tooltip{
+	position: absolute;
+	left: 170px;
+	top: 0;
+	transform: translate(-75%, -10%);
+	border-radius: 10px;
+	height: 35px;
+	width: 130px;
+	background-color: #fff;
+	font-weight: 600;
+	text-align: center;
+	font-size: 13px;
+	display: block;
+	color: #333;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+	pointer-events: none;
+	opacity: 0;
+	transition: all .3s ease;
+}
+
+.sidebar.active ul li:hover .tooltip{
+	opacity: 1;
+	top: 10%;
+	z-index: 999999;
+}
+
+.sidebar ul li:hover .tooltip{
+	opacity: 0;
+}
+
+main{
+	position: absolute;
+	height: 100%;
+	width: calc(100% = 0);
+	left: 320px;
+	transition: .3s;
+	padding: 2% 2% 0 1%;
+	
+}
+
+.sidebar.active ~ main{
+	left: 120px;
+}
+
+main .fixed-header{
+	position: sticky;
+	top: 2%;
+	padding: 10px 20px;
+	right: 1%;
+	height: 60px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 18px;
+	gap: 20px;
+	z-index: 999999;
+}
+
+main .fixed-header .account a{
+	font-size: 2.3em;
+	color: #676a8c;
+	cursor: pointer;
+}
+
+.fixed-header .dropdown-menu{
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+}
+
+.fixed-header .dropdown-menu li a{
+	font-size: .95em;
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.wrapper .head-title{
+	margin-left: 10px;
+	color: #444;
+	font-size: .95em;
+}
+
+.wrapper .head-title h3{
+	font-size: 1.4em;
+}
+
+.wrapper{
+	margin-top: 20px;
+}
+
+.wrapper .content{
+	margin-top: 50px;
+	padding: 3%;
+}
+
+.bg-s{
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+}
+
+.content span{
+	font-size: 1.6em;
+	font-weight: 500;
+	display: block;
+	margin-bottom: 15px;
+}  
+
+/*Pemesanan Kamar*/
+.content .cards_pk{
+	flex: 1;
+	min-width: 500px;
+}
+
+.content .cards_pk .img_cards{
+	width: 180px;
+	overflow: hidden;
+}
+
+.content .cards_pk .img_cards img{
+	
+}
+
+.cards_pk .content_cards{
+	color: rgba(0, 0, 0, .8);
+}
+
+.cards_pk .content_cards .title_cards{
+	font-size: 1.05em;
+	font-weight: 600;
+}
+
+.cards_pk .content_cards p{
+	margin-top: -15px;
+	color: rgba(0, 0, 0, .5);
+}
+
+.btn.btn-pk{
+	background-color: #34cd85;
+	width: 100px;
+	color: #fff;
+}
+
+.btn.btn-pk:hover{
+	background-color: #3ea667;
+	color: #fff;
+}
+
+.content .kamar-title{
+	font-size: 1.5em;
+}
