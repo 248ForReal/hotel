@@ -58,7 +58,7 @@ if($hal == 'detail'){
                                 ?>
                                             <tr class="table-info" style="text-align: center;">    
                                                 <td scope="row"><?php echo $kodepemesanan; ?></td>
-                                                <td scope="row"><?php echo $idtipekamar; ?></td>
+                                                <td scope="row "><?php echo $idtipekamar; ?></td>>
                                                 <td scope="row"><?php echo $namakamar ;?></td>
                                                 <td scope="row"><?php echo $totalinap ;?></td>
                                                 <td scope="row"><?php echo $hargakamar ;?></td>

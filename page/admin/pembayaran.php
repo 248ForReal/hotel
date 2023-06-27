@@ -100,7 +100,7 @@ if($op == 'detail'){
                                                 <td scope="row"><?php echo $checkin ;?></td>
                                                 <td scope="row"><?php echo $checkout ;?></td>
                                                 <td scope="row"><?php echo $totalinap ;?></td>
-                                                <td scope="row"><?php echo $hargakamar ;?></td>
+                                                <td scope="row"><?php echo"Rp ." . number_format($hargakamar, 0, ',', '.')  ;?></td>
                                                 <td scope="row"><?php echo $tambahan ;?></td>
                                                 <td scope="row"><?php echo $hargatambahan; ?></td>
                                                 <td scope="row"><?php echo $subtotal; ?></td>
